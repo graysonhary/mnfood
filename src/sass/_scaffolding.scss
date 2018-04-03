@@ -1,0 +1,120 @@
+// Force border-box
+html {
+  box-sizing: border-box;
+  color: $font-color;
+  font: $font-style $font-variant $font-weight #{$font-size}/#{$line-height} $font-family;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+h1,h2,h3,h4,h5 {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+p {
+  margin: 0;
+  max-width: 630px;
+}
+
+.container {
+  max-width: 920px;
+}
+
+.center {
+  margin: 0 auto;
+}
+
+// flex
+.flex {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+// Headings & Text
+
+.page-title {
+  color: $coral;
+  font-size: 3rem;
+  font-weight: 500;
+  letter-spacing: .12ch;
+}
+
+.city-title {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: .08ch;
+  text-transform: uppercase;
+}
+
+.restaurant-title {
+  font-size: 1.75rem;
+  font-weight: 400;
+  letter-spacing: .08ch;
+}
+
+.address {
+  color: $coral;
+  font-size: .85rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+// Images
+.svg-map {
+  opacity: .8;
+  transition: .2s;
+}
+
+.svg-map:hover {
+  opacity: .4;
+  transition: .2s;
+}
+// Borders
+
+.gbt-1px {
+  border-top: 1px $light-gray solid;
+}
+
+// Margins
+
+.mt-1r {
+  margin-top: 1rem;
+}
+
+.mt-3r {
+  margin-top: 3rem;
+}
+
+.mr-1r {
+  margin-right: 1rem;
+}
+
+// Padding
+
+.pt-1r {
+  padding-top: 1rem;
+}
+
+.pr-1r {
+  padding-right: 1rem;
+}
+
+// Vertically center anything
+.vertical-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// MEDIA STUFF
+@media only screen and (max-width: 450px) {
+  html {
+    font-size: 14px;
+  }
+  .page-title {
+    font-size: 2.5rem;
+  }
+}
