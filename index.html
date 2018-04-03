@@ -5,44 +5,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>MN Food</title>
     <link rel="stylesheet" href="dist/css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Cutive+Mono" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+    <script type="text/javascript">
+  $(document).ready(function($) {
+    $('#accordion').find('.accordion-toggle').click(function(){
+
+      //Expand or collapse this panel
+      $(this).next().slideToggle('slow');
+
+      //Hide the other panels
+      $(".accordion-content").not($(this).next()).slideUp('slow');
+
+    });
+  });
+</script>
+
   </head>
   <body>
     <div class="container center">
 
       <section>
         <h1 class="page-title">Minnesota Food</h1>
-        <p>Having spent a few years in the Twin Cities, I have found myself enjoying some wonderful meals with some wonderful company. All over the metro, there's something new cooking, just waiting to be found. This website, I hope, can be a resorce to friends, new and old, in discovering the culniary delight that the Twin Cities, and the rest of Minnesota, have to offer.</p>
+        <p>Having spent a few years in the Twin Cities, I have found myself enjoying some wonderful meals with wonderful people. All over the metro, there's something new cooking, just waiting to be found. This website, I hope, can be a resource to friends, new and old, in discovering the culinary delight that the Twin Cities, and the rest of Minnesota, have to offer.</p>
     </section>
 
-    <section class="mt-3r">
-      <h1 class="city-title">Minneapolis</h1>
+    <section class="mt-1r" id="accordion">
+      <h1 class="city-title accordion-toggle">Minneapolis</h1>
+        <div class="accordion-content">
+          <div class="gbt-1px mt-1r pt-1r pr-1r">
+            <div class="flex">
+              <h2 class="restaurant-title">Young Joni</h2>
+              <a class="svg-map" href="https://goo.gl/maps/eB7kAo4KQGq" target="_blank"><img src="imgs/map.svg" alt="map icon"  height="20px"></a>
+            </div>
+            <span class="address">165 13th Ave NE, Minneapolis, MN 55413</span>
+            <p>One of the best spots for pizza, salads, and cocktails in Minneapolis! I love salads and their salads WAIL!!!</p>
+          </div>
 
-      <div class="gbt-1px mt-1r pt-1r pr-1r">
-        <div class="flex">
-          <h2 class="restaurant-title">Young Joni</h2>
-          <a class="svg-map" href="https://goo.gl/maps/eB7kAo4KQGq" target="_blank"><img src="imgs/map.svg" alt="map icon"  height="25px"></a>
-        </div>
-        <span class="address">165 13th Ave NE, Minneapolis, MN 55413</span>
-        <p>One of the best spots for pizza, salads, and cocktails in Minneapolis!</p>
-      </div>
+          <div class="gbt-1px mt-1r pt-1r pr-1r">
+            <div class="flex">
+              <h2 class="restaurant-title">Chimborazo</h2>
+              <a class="svg-map" href="https://goo.gl/maps/9eDZ6JHmYEq" target="_blank"><img src="imgs/map.svg" alt="map icon"  height="20px"></a>
+            </div>
+            <span class="address">2851 Central Ave NE, Minneapolis, MN 55418</span>
+            <p>Stellar Ecuadorian fare in Northeast Minneapolis. The BEST friend plaintains in town, in a quaint, warm environment. Staff is baller!</p>
+          </div>
 
-      <div class="gbt-1px mt-1r pt-1r pr-1r">
-        <div class="flex">
-          <h2 class="restaurant-title">Chimborazo</h2>
-          <a class="svg-map" href="https://goo.gl/maps/9eDZ6JHmYEq" target="_blank"><img src="imgs/map.svg" alt="map icon"  height="25px"></a>
+          <div class="gbt-1px mt-1r pt-1r pr-1r mb-2r">
+            <div class="flex">
+              <h2 class="restaurant-title">The Sample Room</h2>
+              <a class="svg-map" href="https://goo.gl/maps/2UqiHTs9ec32" target="_blank"><img src="imgs/map.svg" alt="map icon"  height="20px"></a>
+            </div>
+            <span class="address">2124 Marshall St NE, Minneapolis, MN 55418</span>
+            <p>An inconspicuous little building lies off Marshall street, not too far South of Lowry Avenue, nor too far from the ever popular Psycho Suzis. This little building is home to The Sample Room, one of, in my opinion, the less talked about spots in Northeast (or Minneapolis, for that matter). Playing host to a great bar program, and an even better food program, the burger (named after French explore, Pierre Bottineau), and their Cuban, are two of the best sandwiches available in town (in addition to what may be the best fries in town, too)!</p>
+          </div>
         </div>
-        <span class="address">2851 Central Ave NE, Minneapolis, MN 55418</span>
-        <p>Stellar Ecudorian fare in Northeast Minneapolis. The BEST friend plaintains in town, in a quaint, warm environment. Staff is baller!</p>
-      </div>
 
-      <div class="gbt-1px mt-1r pt-1r pr-1r">
-        <div class="flex">
-          <h2 class="restaurant-title">The Sample Room</h2>
-          <a class="svg-map" href="https://goo.gl/maps/2UqiHTs9ec32" target="_blank"><img src="imgs/map.svg" alt="map icon"  height="25px"></a>
-        </div>
-        <span class="address">2124 Marshall St NE, Minneapolis, MN 55418</span>
-        <p>An inconspicuous little building lies off Marshall street, not too far South of Lowry Avenue, nor too far from the ever popular Psycho Suzis. This little building is home to The Sample Room, one of, in my opinion, the less talked about spots in Northeast (or Minneapolis, for that matter). Playing host to a great bar program, and an even better food program, the burger (named after French explore, Pierre Bottineau), and their Cuban, are two of the best sandwiches available in town (in addition to what may be the best fries in town, too)!</p>
-      </div>
+        <h1 class="city-title accordion-toggle">Saint Paul</h1>
+          <div class="accordion-content">
+
+            <div class="gbt-1px mt-1r pt-1r pr-1r mb-2r">
+              <div class="flex">
+                <h2 class="restaurant-title">Revival</h2>
+                <a class="svg-map" href="https://goo.gl/maps/3HXWtuZRBP32" target="_blank"><img src="imgs/map.svg" alt="map icon"  height="20px"></a>
+              </div>
+              <span class="address">525 Selby Ave, St Paul, MN 55102</span>
+              <p>Serving up excellent fried chicken, and a myriad of other Southern comfort food, Revival stands out in the Twin Cities for the experience they deliver. On top of their chicken, they have a great beef brisket (the sandwich being my favorite). Though there are two Revival locations, the original being in South Minneapolis, the one in Saint Paul has a full bar. If you've got room after dinner, stick around for a scrumptious piece of pie!</p>
+            </div>
+          </div>
+
+          <h1 class="city-title accordion-toggle">Brooklyn Park</h1>
+            <div class="accordion-content">
+
+              <div class="gbt-1px mt-1r pt-1r pr-1r mb-2r">
+                <div class="flex">
+                  <h2 class="restaurant-title">Lemongrass Thai</h2>
+                  <a class="svg-map" href="https://goo.gl/maps/TbSsSNZaBFA2" target="_blank"><img src="imgs/map.svg" alt="map icon"  height="20px"></a>
+                </div>
+                <span class="address">8600 Edinburgh Center Dr, Minneapolis, MN 55443</span>
+                <p>Pretty much the only restaurant worth visiting North of 694 unless you love Chick-Fil-A.</p>
+              </div>
 
     </section>
 
