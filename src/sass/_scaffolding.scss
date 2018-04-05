@@ -8,6 +8,10 @@ html {
   box-sizing: inherit;
 }
 
+::selection {
+  background-color: rgb(18, 103, 155);
+}
+
 h1,h2,h3,h4,h5 {
   margin: 0;
 }
