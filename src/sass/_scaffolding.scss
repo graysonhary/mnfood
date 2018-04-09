@@ -7,9 +7,12 @@ html {
 *, *::before, *::after {
   box-sizing: inherit;
 }
-
+body {
+  margin: 0;
+}
 ::selection {
   background-color: rgb(18, 103, 155);
+  color: #fefefe;
 }
 
 h1,h2,h3,h4,h5 {
@@ -40,10 +43,9 @@ p {
 // Headings & Text
 
 .page-title {
-  color: $coral;
-  font-size: 3rem;
-  font-weight: 500;
-  letter-spacing: .12ch;
+  color: rgb(255,104,89);
+  font-size: 4rem;
+  letter-spacing: -.02ch;
 }
 
 .city-title {
@@ -55,7 +57,7 @@ p {
 }
 
 .city-title:hover {
-  color: $coral;
+  color: rgb(255,104,89);
   transition: .2s;
 }
 
@@ -70,12 +72,29 @@ p {
   margin-bottom: -.25rem;
 }
 
-.address {
-  color: $coral;
+.typewriter {
+  color: rgb(255,104,89);
   font-family: 'Cutive Mono', monospace;
   font-size: .85rem;
   font-weight: 400;
   text-transform: uppercase;
+}
+
+// footer
+
+footer {
+  background: rgb(255,104,89);
+  padding: 1rem;
+  width: 100%;
+  p {
+    color: #fefefe;
+  }
+  a {
+    color: rgb(18, 103, 155);
+  }
+  a:hover {
+    color: #fefefe;
+  }
 }
 
 // Images
@@ -132,8 +151,9 @@ p {
 // ACCORDION
 
 .accordion-toggle {cursor: pointer;}
-.accordion-content {display: none;}
-.accordion-content.default {display: block;}
+.accordion-content {
+  display: none;
+}
 
 
 // MEDIA STUFF

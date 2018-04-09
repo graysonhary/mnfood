@@ -5,89 +5,102 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>MN Food</title>
     <link rel="stylesheet" href="dist/css/main.css">
-    <link href="https://fonts.googleapis.com/css?family=Cutive+Mono" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Anton|Cutive+Mono" rel="stylesheet">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
     <script type="text/javascript">
-  $(document).ready(function($) {
-    $('#accordion').find('.accordion-toggle').click(function(){
-
-      //Expand or collapse this panel
-      $(this).next().slideToggle('slow');
-
-      //Hide the other panels
-      $(".accordion-content").not($(this).next()).slideUp('slow');
-
-    });
-  });
-</script>
-
+      $(document).ready(function($) {
+        $('#accordion').find('.accordion-toggle').click(function(){
+          //Expand or collapse this panel
+          $(this).next().slideToggle('slow');
+          //Hide the other panels
+          $(".accordion-content").not($(this).next()).slideUp('slow');
+        });
+        });
+    </script>
   </head>
   <body>
-    <div class="container center">
-
+    <main class="container center">
       <section>
         <h1 class="page-title">Minnesota Food</h1>
         <p>Having spent a few years in the Twin Cities, I have found myself enjoying some wonderful meals with wonderful people. All over the metro, there's something new cooking, just waiting to be found. This website, I hope, can be a resource to friends, new and old, in discovering the culinary delight that the Twin Cities, and the rest of Minnesota, have to offer.</p>
-    </section>
-
-    <section class="mt-1r" id="accordion">
-      <h1 class="city-title accordion-toggle">Minneapolis</h1>
+      </section>
+      <section class="mt-1r" id="accordion">
+        <h1 class="city-title accordion-toggle">Minneapolis — Northeast</h1>
         <div class="accordion-content">
           <div class="gbt-1px mt-1r pt-1r pr-1r">
             <div class="flex">
               <h2 class="restaurant-title">Young Joni</h2>
               <a class="svg-map" href="https://goo.gl/maps/eB7kAo4KQGq" target="_blank"><img src="imgs/map.svg" alt="map icon"  height="20px"></a>
             </div>
-            <span class="address">165 13th Ave NE, Minneapolis, MN 55413</span>
+            <span class="typewriter">165 13th Ave NE, Minneapolis, MN 55413</span>
             <p>One of the best spots for pizza, salads, and cocktails in Minneapolis! I love salads and their salads WAIL!!!</p>
           </div>
-
           <div class="gbt-1px mt-1r pt-1r pr-1r">
             <div class="flex">
               <h2 class="restaurant-title">Chimborazo</h2>
               <a class="svg-map" href="https://goo.gl/maps/9eDZ6JHmYEq" target="_blank"><img src="imgs/map.svg" alt="map icon"  height="20px"></a>
             </div>
-            <span class="address">2851 Central Ave NE, Minneapolis, MN 55418</span>
-            <p>Stellar Ecuadorian fare in Northeast Minneapolis. The BEST friend plaintains in town, in a quaint, warm environment. Staff is baller!</p>
+            <span class="typewriter">2851 Central Ave NE, Minneapolis, MN 55418</span>
+            <p>Stellar Ecuadorian fare in Northeast Minneapolis. A quiet and quaint, warm environment. The BEST fried plaintains in town, in addition to a small but exemplary menu offering a variety of delicious options. Staff is baller and super down to Earth!</p>
           </div>
-
           <div class="gbt-1px mt-1r pt-1r pr-1r mb-2r">
             <div class="flex">
               <h2 class="restaurant-title">The Sample Room</h2>
               <a class="svg-map" href="https://goo.gl/maps/2UqiHTs9ec32" target="_blank"><img src="imgs/map.svg" alt="map icon"  height="20px"></a>
             </div>
-            <span class="address">2124 Marshall St NE, Minneapolis, MN 55418</span>
+            <span class="typewriter">2124 Marshall St NE, Minneapolis, MN 55418</span>
             <p>An inconspicuous little building lies off Marshall street, not too far South of Lowry Avenue, nor too far from the ever popular Psycho Suzis. This little building is home to The Sample Room, one of, in my opinion, the less talked about spots in Northeast (or Minneapolis, for that matter). Playing host to a great bar program, and an even better food program, the burger (named after French explore, Pierre Bottineau), and their Cuban, are two of the best sandwiches available in town (in addition to what may be the best fries in town, too)!</p>
           </div>
         </div>
-
-        <h1 class="city-title accordion-toggle">Saint Paul</h1>
+          <h1 class="city-title accordion-toggle">Minneapolis — South</h1>
           <div class="accordion-content">
+            <div class="gbt-1px mt-1r pt-1r pr-1r mb-2r">
+              <div class="flex">
+                <h2 class="restaurant-title">Young Joni</h2>
+                <a class="svg-map" href="https://goo.gl/maps/eB7kAo4KQGq" target="_blank"><img src="imgs/map.svg" alt="map icon"  height="20px"></a>
+              </div>
+              <span class="typewriter">165 13th Ave NE, Minneapolis, MN 55413</span>
+              <p>One of the best spots for pizza, salads, and cocktails in Minneapolis! I love salads and their salads WAIL!!!</p>
+            </div>
+          </div>
 
+          <h1 class="city-title accordion-toggle">Saint Paul</h1>
+          <div class="accordion-content">
             <div class="gbt-1px mt-1r pt-1r pr-1r mb-2r">
               <div class="flex">
                 <h2 class="restaurant-title">Revival</h2>
                 <a class="svg-map" href="https://goo.gl/maps/3HXWtuZRBP32" target="_blank"><img src="imgs/map.svg" alt="map icon"  height="20px"></a>
               </div>
-              <span class="address">525 Selby Ave, St Paul, MN 55102</span>
+              <span class="typewriter">525 Selby Ave, St Paul, MN 55102</span>
               <p>Serving up excellent fried chicken, and a myriad of other Southern comfort food, Revival stands out in the Twin Cities for the experience they deliver. On top of their chicken, they have a great beef brisket (the sandwich being my favorite). Though there are two Revival locations, the original being in South Minneapolis, the one in Saint Paul has a full bar. If you've got room after dinner, stick around for a scrumptious piece of pie!</p>
             </div>
-          </div>
 
+            <div class="gbt-1px mt-1r pt-1r pr-1r mb-2r">
+              <div class="flex">
+                <h2 class="restaurant-title">Mucci's Italian</h2>
+                <a class="svg-map" href="https://goo.gl/maps/i43QjakgLxB2" target="_blank"><img src="imgs/map.svg" alt="map icon"  height="20px"></a>
+              </div>
+              <span class="typewriter">786 Randolph Ave, St Paul, MN 55102</span>
+              <p>A fantastic little Italian spot in Saint Paul, tucked between 35E and West Seventh, on Randolph Avenue. The tiramasu is a must (always, duh), and I highly recommend the three course dinner!!! Fantastic staff, who are always upbeat and make it readily apparent that they love what they do!</p>
+            </div>
+          </div>
           <h1 class="city-title accordion-toggle">Brooklyn Park</h1>
             <div class="accordion-content">
-
               <div class="gbt-1px mt-1r pt-1r pr-1r mb-2r">
                 <div class="flex">
                   <h2 class="restaurant-title">Lemongrass Thai</h2>
                   <a class="svg-map" href="https://goo.gl/maps/TbSsSNZaBFA2" target="_blank"><img src="imgs/map.svg" alt="map icon"  height="20px"></a>
                 </div>
-                <span class="address">8600 Edinburgh Center Dr, Minneapolis, MN 55443</span>
-                <p>Pretty much the only restaurant worth visiting North of 694 unless you love Chick-Fil-A.</p>
+                <span class="typewriter">8600 Edinburgh Center Dr, Minneapolis, MN 55443</span>
+                <p>A great Thai spot that also features great sushi offerings! Attentive and experienced staff! Lunch options are great, with a wide variety of noodle and rice dishes, as well as soups. A few worthwhile house specials as well!</p>
               </div>
-
-    </section>
-
-    </div>
+      </section>
+    </main>
+    <footer class="mt-2r">
+      <div class="container center typewriter">
+        <a href="http://github.com/graysonhary/mnfood" target="_blank">View on GitHub</a>
+        <p>&#169; No one in particular — 2018</p>
+      </div>
+    </footer>
   </body>
 </html>
