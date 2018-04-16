@@ -8,7 +8,7 @@ html {
   box-sizing: inherit;
 }
 body {
-  margin-top: 2px;
+  margin-top: 1rem;
 }
 ::selection {
   background-color: rgb(18, 103, 155);
@@ -17,15 +17,31 @@ body {
 
 .site {
   margin: 0 auto;
+  max-width: 800px;
 }
 
 /*--------------------------------------------------------------
-Minnesota Styles
+Colors
 --------------------------------------------------------------*/
-.minnesota img {
-  display: block;
-  height: 100%;
-  margin: 0 auto;
+
+.light-blue {
+  color: $light-blue;
+}
+
+/*--------------------------------------------------------------
+Type
+--------------------------------------------------------------*/
+
+.cutive {
+  font-family: $cutive;
+}
+
+h1,h2,h3,h4,h5 {
+  margin: 0;
+}
+
+p {
+  max-width: 40em;
 }
 
 /*--------------------------------------------------------------
@@ -38,7 +54,49 @@ If no grid support, limit width to 50em and center align
   .footer {
   		max-width: 50em;
   		margin: 0 auto;
-  	}
+    }
+}
+
+/*--------------------------------------------------------------
+Minnesota Styles
+--------------------------------------------------------------*/
+.minnesota{
+  background: $light-blue;
+  max-width: 400px;
+  padding: 1rem;
+
+  img {
+    display: block;
+    height: 184px;
+    margin: 25% auto;
+  }
+}
+
+/*--------------------------------------------------------------
+Page Title Styles
+--------------------------------------------------------------*/
+.page-title {
+  background: $dark-green;
+  padding: 1rem;
+  position: relative;
+
+  .title-content {
+    bottom: 0;
+    position: absolute;
+  }
+  h1 {
+    font-size: 5rem;
+    letter-spacing: -.08ch;
+    line-height: .8;
+  }
+}
+
+/*--------------------------------------------------------------
+Main Styles
+--------------------------------------------------------------*/
+.main-content {
+  max-width: 800px;
+  padding: 1rem;
 }
 
 /*--------------------------------------------------------------
@@ -74,5 +132,58 @@ CSS Grid layout for wider screens, when browser supports grid:
       grid-area: footer;
     }
 
+  }
+}
+
+@supports (display: grid) {
+  @media screen and (max-width: 800px) {
+
+  	.site {
+			display: grid;
+			grid-template-columns: auto;
+      grid-template-rows: auto auto auto 1fr;
+      grid-template-areas:
+        "minnesota"
+        "title"
+        "main"
+        "footer";
+		}
+
+    .minnesota {
+      grid-area: minnesota;
+    }
+
+    .page-title {
+      grid-area: title;
+    }
+
+    .main-content {
+      grid-area: main;
+    }
+
+    .footer {
+      grid-area: footer;
+    }
+
+  }
+}
+
+  @media screen and (max-width: 800px) {
+  .page-title {
+    position: inherit;
+    .title-content {
+      position: inherit;
+    }
+    hr {
+      margin-right: 0;
+      }
+  }
+  .minnesota {
+    max-width: 100%;
+    img {
+    max-height: 100px;
+    margin: 0 auto;
+    padding: 1rem;
+    }
   }
 }
