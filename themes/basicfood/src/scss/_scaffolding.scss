@@ -8,143 +8,71 @@ html {
   box-sizing: inherit;
 }
 body {
-  margin: 2px;
+  margin-top: 2px;
 }
 ::selection {
   background-color: rgb(18, 103, 155);
   color: #fefefe;
 }
 
-h1,h2,h3,h4,h5 {
-  margin: 0;
-}
-a {
-  text-decoration: none;
-}
-p {
-  margin: 0;
-  max-width: 630px;
-}
-
-.container {
-  max-width: 920px;
-}
-
-.center {
+.site {
   margin: 0 auto;
 }
 
-// flex
-.flex {
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-}
-// Headings & Text
-
-.page-title {
-  color: rgb(255,104,89);
-  font-size: 4rem;
-  letter-spacing: -.02ch;
+/*--------------------------------------------------------------
+Minnesota Styles
+--------------------------------------------------------------*/
+.minnesota img {
+  display: block;
+  height: 100%;
+  margin: 0 auto;
 }
 
-.city-title {
-  font-size: 1rem;
-  font-weight: 700;
-  letter-spacing: .08ch;
-  text-transform: uppercase;
-  transition: .2s;
+/*--------------------------------------------------------------
+If no grid support, limit width to 50em and center align
+--------------------------------------------------------------*/
+@supports not (display: grid) {
+  .minnesota,
+  .page-title,
+  .main-content,
+  .footer {
+  		max-width: 50em;
+  		margin: 0 auto;
+  	}
 }
 
-.restaurant-title {
-  font-size: 1.75rem;
-  font-weight: 400;
-  letter-spacing: .08ch;
-  margin-bottom: -.25rem;
-}
+/*--------------------------------------------------------------
+CSS Grid layout for wider screens, when browser supports grid:
+--------------------------------------------------------------*/
 
-.typewriter {
-  color: rgb(255,104,89);
-  font-family: 'Cutive Mono', monospace;
-  font-size: .85rem;
-  font-weight: 400;
-  text-transform: uppercase;
-}
+@supports (display: grid) {
+  @media screen and (min-width: 800px) {
 
-// footer
+  	.site {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+      grid-template-rows: 400px auto 1fr;
+      grid-template-areas:
+        "minnesota title"
+        "main main"
+        "footer footer";
+		}
 
-footer {
-  background: rgb(255,104,89);
-  padding: 1rem;
-  width: 100%;
-  p {
-    color: #fefefe;
-  }
-  a {
-    color: rgb(18, 103, 155);
-  }
-  a:hover {
-    color: #fefefe;
-  }
-}
+    .minnesota {
+      grid-area: minnesota;
+    }
 
-// Images
-.svg-map {
-  opacity: .8;
-  transition: .2s;
-}
+    .page-title {
+      grid-area: title;
+    }
 
-.svg-map:hover {
-  opacity: .4;
-  transition: .2s;
-}
-// Borders
+    .main-content {
+      grid-area: main;
+    }
 
-.gbt-1px {
-  border-top: 1px $light-gray solid;
-}
+    .footer {
+      grid-area: footer;
+    }
 
-// Margins
-
-.mt-1r {
-  margin-top: 1rem;
-}
-
-.mt-2r {
-  margin-top: 3rem;
-}
-
-.mr-1r {
-  margin-right: 1rem;
-}
-
-.mb-2r {
-  margin-bottom: 2rem;
-}
-
-// Padding
-
-.pt-1r {
-  padding-top: 1rem;
-}
-
-.pr-1r {
-  padding-right: 1rem;
-}
-
-// Vertically center anything
-.vertical-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-// MEDIA STUFF
-@media only screen and (max-width: 450px) {
-  html {
-    font-size: 14px;
-  }
-  .page-title {
-    font-size: 2.5rem;
   }
 }

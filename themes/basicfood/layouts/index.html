@@ -1,54 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>MN Food</title>
-  <link rel="stylesheet" href="css/main.css">
-    <link href="https://fonts.googleapis.com/css?family=Anton|Cutive+Mono" rel="stylesheet">
-  </head>
+{{ partial "head.html" . }}
   <body>
-    <main class="container center">
-      <section>
-        <h1 class="page-title">Minnesota Food</h1>
-        <p>Having spent a few years in the Twin Cities, I have found myself enjoying some wonderful meals with wonderful people. All over the metro, there's something new cooking, just waiting to be found. This website, I hope, can be a resource to friends, new and old, in discovering the culinary delight that the Twin Cities, and the rest of Minnesota, have to offer.</p>
-      </section>
-      <section class="mt-1r">
-        <h1 class="city-title">Minneapolis — Northeast</h1>
 
-          <div class="gbt-1px mt-1r pt-1r pr-1r">
-            <div class="flex">
-              <h2 class="restaurant-title">Young Joni</h2>
-              <a class="svg-map" href="https://goo.gl/maps/eB7kAo4KQGq" target="_blank"><img src="imgs/map.svg" alt="map icon"  height="20px"></a>
-            </div>
-            <span class="typewriter">165 13th Ave NE, Minneapolis, MN 55413</span>
-            <p>One of the best spots for pizza, salads, and cocktails in Minneapolis! I love salads and their salads WAIL!!!</p>
-          </div>
-          <div class="gbt-1px mt-1r pt-1r pr-1r">
-            <div class="flex">
-              <h2 class="restaurant-title">Chimborazo</h2>
-              <a class="svg-map" href="https://goo.gl/maps/9eDZ6JHmYEq" target="_blank"><img src="imgs/map.svg" alt="map icon"  height="20px"></a>
-            </div>
-            <span class="typewriter">2851 Central Ave NE, Minneapolis, MN 55418</span>
-            <p>Stellar Ecuadorian fare in Northeast Minneapolis. A quiet and quaint, warm environment. The BEST fried plaintains in town, in addition to a small but exemplary menu offering a variety of delicious options. Staff is baller and super down to Earth!</p>
-          </div>
-          <div class="gbt-1px mt-1r pt-1r pr-1r mb-2r">
-            <div class="flex">
-              <h2 class="restaurant-title">The Sample Room</h2>
-              <a class="svg-map" href="https://goo.gl/maps/2UqiHTs9ec32" target="_blank"><img src="imgs/map.svg" alt="map icon"  height="20px"></a>
-            </div>
-            <span class="typewriter">2124 Marshall St NE, Minneapolis, MN 55418</span>
-            <p>An inconspicuous little building lies off Marshall street, not too far South of Lowry Avenue, nor too far from the ever popular Psycho Suzis. This little building is home to The Sample Room, one of, in my opinion, the less talked about spots in Northeast (or Minneapolis, for that matter). Playing host to a great bar program, and an even better food program, the burger (named after French explore, Pierre Bottineau), and their Cuban, are two of the best sandwiches available in town (in addition to what may be the best fries in town, too)!</p>
-          </div>
+    <div class="site">
 
+      {{ partial "header.html" . }}
 
-      </section>
-    </main>
-    <footer class="mt-2r">
-      <div class="container center typewriter">
-        <a href="http://github.com/graysonhary/mnfood" target="_blank">View on GitHub</a>
-        <p>&#169; No one in particular — 2018</p>
-      </div>
-    </footer>
+      <main class="main-content">
+        {{ partial "minneapolis.html" . }}
+      </main>
+
+      <footer class="footer">
+        {{ partial "footer.html" . }}
+      </footer>
+
+    </site>
+
   </body>
 </html>
