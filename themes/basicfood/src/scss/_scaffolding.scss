@@ -8,7 +8,7 @@ html {
   box-sizing: inherit;
 }
 body {
-  margin-top: 1rem;
+  margin: 1rem 0 0 0;
 }
 ::selection {
   background-color: rgb(18, 103, 155);
@@ -17,7 +17,6 @@ body {
 
 .site {
   margin: 0 auto;
-  max-width: 800px;
 }
 
 /*--------------------------------------------------------------
@@ -28,21 +27,58 @@ Colors
   color: $light-blue;
 }
 
+.dark-green {
+  color: $dark-green;
+}
+
+.blush {
+  color: $blush;
+}
+
+.white {
+  color: white;
+}
+
 /*--------------------------------------------------------------
 Type
 --------------------------------------------------------------*/
+
+a {
+  text-decoration: none;
+}
+
+p {
+  display: inline-block;
+  margin-top: .25rem;
+  max-width: 38em;
+}
+
+h1,h2,h3,h4,h5 {
+  font-weight: 400;
+  letter-spacing: .08ch;
+  margin: 0;
+}
 
 .cutive {
   font-family: $cutive;
 }
 
-h1,h2,h3,h4,h5 {
-  margin: 0;
+.bold {
+  font-weight: 700;
 }
 
-p {
-  max-width: 40em;
+.uppercase {
+  text-transform: uppercase;
 }
+
+.h2 {
+  font-size: 2rem;
+}
+
+.h3 {
+  font-size: 1.25rem;
+}
+
 
 /*--------------------------------------------------------------
 If no grid support, limit width to 50em and center align
@@ -62,13 +98,16 @@ Minnesota Styles
 --------------------------------------------------------------*/
 .minnesota{
   background: $light-blue;
-  max-width: 400px;
   padding: 1rem;
+  position: relative;
 
   img {
     display: block;
     height: 184px;
-    margin: 25% auto;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 
@@ -95,8 +134,38 @@ Page Title Styles
 Main Styles
 --------------------------------------------------------------*/
 .main-content {
+  margin: 0 auto;
   max-width: 800px;
   padding: 1rem;
+  .flex {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+  .svg-map {
+    opacity: .8;
+    transition: .2s;
+  }
+
+  .svg-map:hover {
+    opacity: .4;
+    transition: .2s;
+  }
+  .restaurant {
+    border-top: 1px solid $light-gray;
+    margin-top: 1rem;
+    padding-top: .75rem;
+  }
+}
+
+/*--------------------------------------------------------------
+Footer Styles
+--------------------------------------------------------------*/
+.footer {
+  background: hsl(0,0%,5%);
+  padding: 1rem;
+  margin: 0 auto;
+  width: 100%;
 }
 
 /*--------------------------------------------------------------
@@ -109,7 +178,7 @@ CSS Grid layout for wider screens, when browser supports grid:
   	.site {
 			display: grid;
 			grid-template-columns: 1fr 1fr;
-      grid-template-rows: 400px auto 1fr;
+      grid-template-rows: 400px auto auto;
       grid-template-areas:
         "minnesota title"
         "main main"
@@ -141,7 +210,7 @@ CSS Grid layout for wider screens, when browser supports grid:
   	.site {
 			display: grid;
 			grid-template-columns: auto;
-      grid-template-rows: auto auto auto 1fr;
+      grid-template-rows: auto auto auto auto;
       grid-template-areas:
         "minnesota"
         "title"
@@ -171,6 +240,7 @@ CSS Grid layout for wider screens, when browser supports grid:
   @media screen and (max-width: 800px) {
   .page-title {
     position: inherit;
+
     .title-content {
       position: inherit;
     }
@@ -180,10 +250,20 @@ CSS Grid layout for wider screens, when browser supports grid:
   }
   .minnesota {
     max-width: 100%;
+    position: inherit;
+
     img {
     max-height: 100px;
     margin: 0 auto;
     padding: 1rem;
+    position: inherit;
+    transform: none;
     }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  html {
+    font-size: .8rem;
   }
 }
